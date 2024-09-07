@@ -1,70 +1,92 @@
-# Getting Started with Create React App
+# Remercee
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Remercee is an innovative web application that allows consumers to leave quick and direct feedback on server performance by scanning a QR code. In addition to this feedback feature, the application also provides advanced tools for recruitment, facilitating the connection between restaurateurs and qualified servers through an optimized matching system.
 
-## Available Scripts
+## Objectives
 
-In the project directory, you can run:
+- Provide consumers with a simple and instant method to evaluate servers.
+- Facilitate the connection between restaurateurs and servers through effective matching between job offers and server profiles.
 
-### `npm start`
+## Key Features
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+### Frontend (Webapp)
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+- **User Interface:**
+  - Responsive design for smooth use on both mobile and desktop.
+  - Intuitive interface for scanning QR codes, allowing consumers to access a dedicated server page with their name, photo, seniority, number of ratings, average rating, and number of employer reviews.
+  - Dedicated dashboard for Admins and Restaurateurs (for recruitment and tracking).
+  - Multilingual support for global use.
 
-### `npm test`
+- **QR Code Evaluation:**
+  - Scanning QR codes to access a specific evaluation page for each server.
+  - Rating system from 1 to 5, without text, for quick feedback.
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+- **Statistics and Reports:**
+  - Visualization of server performance through graphs and tables.
+  - Generation of detailed reports for Admins and Restaurateurs.
 
-### `npm run build`
+### Backend (Node.js + Firebase)
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+- **User Management:**
+  - Secure authentication system (Firebase Authentication).
+  - Management of roles and permissions for different types of users (Admin, Server, Consumer, Restaurateur).
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+- **Evaluation Processing:**
+  - Secure storage of consumer and restaurateur ratings.
+  - Feedback analysis algorithm to provide real-time statistics based on a 1 to 5 scale.
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+- **Recruitment Module:**
+  - Creation and management of job offers for servers.
+  - Detailed server profiles with evaluation history and recommendations from restaurateurs.
+  - Matching system between servers and job offers based on experience and evaluations.
 
-### `npm run eject`
+## User Types
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+1. **Admin:**
+   - Global view of server, consumer, and restaurateur statistics.
+   - Moderation of reviews and management of comments.
+   - Manual addition of servers and management of access and roles.
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+2. **Consumer:**
+   - Leave quick reviews on servers via QR code scanning.
+   - Access server page with details on seniority, ratings, average score, and employer reviews.
+   - History of reviews left.
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+3. **Server:**
+   - Access reviews received from consumers and restaurateurs.
+   - View personal performance statistics.
+   - Ability to respond to restaurateur reviews.
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+4. **Restaurateur:**
+   - Leave reviews on servers with greater weight as an employer.
+   - History of reviews left.
+   - Access to global statistics of servers under their management.
+   - Verification and attestation that the review is provided by a restaurant manager.
 
-## Learn More
+## Installation
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+1. Clone the repository:
+   ```bash
+   git clone https://github.com/DevASquared/remercee.git
+   ```
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+2. Navigate to the project directory:
+   ```bash
+   cd remercee
+   ```
 
-### Code Splitting
+3. Install dependencies:
+   ```bash
+   npm install
+   ```
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+4. Configure Firebase and environment variables as indicated in the `.env` file.
 
-### Analyzing the Bundle Size
+5. Start the server:
+   ```bash
+   npm start
+   ```
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+## License
 
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for more details.
